@@ -1,0 +1,446 @@
+/* 
+ * Author: Bradley Tse
+ * Date: April 2013
+ * Email: bradleytse@gmail.com
+ *
+ * Main css file.
+ * I organized everything by grouping similar elements together.
+ * There is currently an unecessary amount of comments.
+ */
+
+
+/******************************************************************************
+ * Custom Fonts
+ *****************************************************************************/
+@font-face {
+    font-family: 'chunkfiveroman';
+    src: url('./fonts/chunkfive-webfont.eot');
+    src: url('./fonts/chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/chunkfive-webfont.woff') format('woff'),
+         url('./fonts/chunkfive-webfont.ttf') format('truetype'),
+         url('./fonts/chunkfive-webfont.svg#chunkfiveroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebasregular';
+    src: url('./fonts/bebas___-webfont.eot');
+    src: url('./fonts/bebas___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/bebas___-webfont.woff') format('woff'),
+         url('./fonts/bebas___-webfont.ttf') format('truetype'),
+         url('./fonts/bebas___-webfont.svg#bebasregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pacificoregular';
+    src: url('./fonts/pacifico-webfont.eot');
+    src: url('./fonts/pacifico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/pacifico-webfont.woff') format('woff'),
+         url('./fonts/pacifico-webfont.ttf') format('truetype'),
+         url('./fonts/pacifico-webfont.svg#pacificoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'patuaoneregular';
+    src: url('./fonts/patuaone-regular-webfont.eot');
+    src: url('./fonts/patuaone-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/patuaone-regular-webfont.woff') format('woff'),
+         url('./fonts/patuaone-regular-webfont.ttf') format('truetype'),
+         url('./fonts/patuaone-regular-webfont.svg#patua_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'oswaldbold';
+    src: url('./fonts/oswald-bold-webfont.eot');
+    src: url('./fonts/oswald-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/oswald-bold-webfont.woff') format('woff'),
+         url('./fonts/oswald-bold-webfont.ttf') format('truetype'),
+         url('./fonts/oswald-bold-webfont.svg#oswaldbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('./fonts/bebasneue-webfont.eot');
+    src: url('./fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/bebasneue-webfont.woff') format('woff'),
+         url('./fonts/bebasneue-webfont.ttf') format('truetype'),
+         url('./fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'komika_axisregular';
+    src: url('./fonts/komikax_-webfont.eot');
+    src: url('./fonts/komikax_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/komikax_-webfont.woff') format('woff'),
+         url('./fonts/komikax_-webfont.ttf') format('truetype'),
+         url('./fonts/komikax_-webfont.svg#komika_axisregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'collegiateregular';
+    src: url('./fonts/collegia-webfont.eot');
+    src: url('./fonts/collegia-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/collegia-webfont.woff') format('woff'),
+         url('./fonts/collegia-webfont.ttf') format('truetype'),
+         url('./fonts/collegia-webfont.svg#collegiateregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'molotregular';
+    src: url('./fonts/molot-webfont.eot');
+    src: url('./fonts/molot-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/molot-webfont.woff') format('woff'),
+         url('./fonts/molot-webfont.ttf') format('truetype'),
+         url('./fonts/molot-webfont.svg#molotregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'lobster_tworegular';
+    src: url('./fonts/lobstertwo-regular-webfont.eot');
+    src: url('./fonts/lobstertwo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/lobstertwo-regular-webfont.woff') format('woff'),
+         url('./fonts/lobstertwo-regular-webfont.ttf') format('truetype'),
+         url('./fonts/lobstertwo-regular-webfont.svg#lobster_tworegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/******************************************************************************
+ * RESET
+ *****************************************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/******************************************************************************
+ * Element: Body
+ *****************************************************************************/
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 62.5%; /* Downsizes it to 10px */
+    text-align: center;
+    color: #7e8289; 
+    /* FIXME Need to do for all browsers */
+    background: linear-gradient(to bottom, #f7f7f8 0%, #f2f3f4 100%);
+    margin: 0 auto;
+}
+
+/******************************************************************************
+ * Element: Headers
+ *****************************************************************************/
+h1, h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-family: bebas_neueregular;
+}
+
+section h2 {
+    font-size: 7em;
+    margin: 20px auto;
+}
+
+header h1 {
+    font-size: 16em;
+    color: #f38237;
+    margin: 110px 0 40px 0;
+}
+
+/******************************************************************************
+ * Element: Header
+ *****************************************************************************/
+header {
+    height:550px;
+    background-image: url('../images/airplane-bg-motionblur.png');
+    background-repeat: no-repeat;
+    background-color: #2e3436;
+    background-position: center 58%;
+    width: 100%;
+    overflow: hidden; /* Hides h1's overflow margin */
+}
+
+/******************************************************************************
+ * Class: horiz-line
+ *****************************************************************************/
+.horiz-line {
+    position: relative;
+    border-top: 1px solid #000000;
+    margin: 0 auto;
+    width: 30em;
+}
+
+/******************************************************************************
+ * Element: div
+ *****************************************************************************/
+div#social-links {
+    margin-top: 80px;
+}
+
+/* FIXME: Convert this to using the image instead */
+div#social-links div {
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px 10px 0 10px;
+    -webkit-transition: margin-top 0.5s ease;
+    -moz-transition: margin-top 0.5s ease;
+    -o-transition: margin-top 0.5s ease;
+    transition: margin-top 0.5s ease;
+}
+
+div#social-links div:hover {
+    margin-top: 0;
+}
+
+/* Holds the position when navbar becomes fixed */
+div#nav-wrapper {
+    height: 40px;
+}
+
+/* Used to position name-bg */
+div#bg-wrap {
+    position: absolute; 
+    right:50%;
+}
+
+/* Give bg to title */
+div#name-bg {
+    position: relative;
+    right: -50%;
+    height: 110px;
+    width: 620px;
+    margin-top: 24px;
+    background-color: rgba(46, 52, 54, 0.8);
+    z-index: 1;
+}
+
+div#penguin {
+    position: absolute;
+    height: 40px;
+    width: 55px;
+    bottom: 0;
+    right: 25%;
+    background-image: url("../images/p3.gif");
+    background-repeat: no-repeat;
+    background-position: -5px -25px;
+    background-size: 65px 65px;
+}
+
+div#broken {
+    position: absolute;
+    font-size: 2em;
+    margin-top: 20px
+}
+
+footer div#footer-inner {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 9px 0;
+}
+
+/******************************************************************************
+ * Element: li
+ *****************************************************************************/
+div#nav-wrapper li {
+    padding: 12px 40px;
+    display: inline-block;
+}
+
+/******************************************************************************
+ * Element: nav
+ *****************************************************************************/
+div#nav-wrapper nav#navbar {
+    display: block;
+    background-color: #a9c0c6;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    z-index: 999;
+    height: 40px;
+    width: 100%;
+    -webkit-box-shadow: 0px 1px 1px 0px; 
+    box-shadow: 0px 1px 1px 0px; 
+}
+
+
+/******************************************************************************
+ * Element: ul
+ *****************************************************************************/
+ul {
+    list-style: none outside;
+    margin: 0 auto;
+}
+
+/******************************************************************************
+ * Element: section
+ *****************************************************************************/
+section {
+    padding-top: 80px; /* Padding increases size of border for scrolling  */
+}
+
+/******************************************************************************
+ * Element: p
+ *****************************************************************************/
+section p {
+    font-size: 2em;
+    text-align: left;
+    width: 700px;
+    margin: 0 auto;
+    line-height: 30px;
+}   
+
+header p#description {
+    font-family: pacificoregular ;
+    font-size: 3.2em;    
+    color: #f2f3f4;
+    margin: 20px auto;
+}
+
+/******************************************************************************
+ * Class: .sub-header
+ *****************************************************************************/
+section .sub-header {
+    margin: 0px auto 80px auto;
+}
+
+/******************************************************************************
+ * Element: footer
+ *****************************************************************************/
+footer {
+    font-size: 11px;
+    color: #9b9ca1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px -1px 1px 0px; 
+    box-shadow: 0px -1px 1px 0px; 
+}
+
+/******************************************************************************
+ * Element: a
+ *****************************************************************************/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 a {
+    position: relative;
+    z-index: 1000;
+}
+
+#social-links a {
+    display: block;
+}
+
+#navbar ul li a {
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: #f38237;
+}
+
+/*
+#social-links a {
+    display: inline-block;
+    background-image: url("../images/sprites.png");    
+    background-size: 160px 42px;
+    height: 41px;
+    width: 41px;
+}
+
+#twitter a {
+    background-position: -42px 0px;
+}
+
+#linkedin a {
+    background-position: -83px 0px;
+}
+
+#github a {
+    background-position: -1px 0px;
+}*/
+
+/******************************************************************************
+ * Class: .sticky
+ *****************************************************************************/
+/* Used to make nav bar fixed when scrolling */
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+/******************************************************************************
+ * Class: img
+ *****************************************************************************/
+#social-links img {
+    height: 40px;
+    width: 40px;
+    opacity: 0.4;
+}

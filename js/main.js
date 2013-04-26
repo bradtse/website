@@ -55,7 +55,7 @@ $(document).ready(function() {
             $(this).find("img").stop(true).fadeTo(300, 1);
         },
         function() {
-            $(this).find("img").stop(true).fadeTo(300, 0.4);
+            $(this).find("img").stop(true).fadeTo(300, 0.5);
         }
     );
     

@@ -245,44 +245,53 @@ div#header-wrap {
 }
 
 div#social-links {
-    margin-top: 80px;
+    margin: 0 0 0 0;
+    height: 80px;
+    width: auto;
 }
 
 /* FIXME: Convert this to using the image instead */
 div#social-links div {
     display: inline-block;
     vertical-align: top;
-    margin: 5px 10px 0 10px;
-    -webkit-transition: margin-top 0.5s ease;
-    -moz-transition: margin-top 0.5s ease;
-    -o-transition: margin-top 0.5s ease;
-    transition: margin-top 0.5s ease;
+    margin: 35px 10px 0 10px;
+    -webkit-transition: margin-top 0.3s ease;
+    -moz-transition: margin-top 0.3s ease;
+    -o-transition: margin-top 0.3s ease;
+    transition: margin-top 0.3s ease;
 }
 
 div#social-links div:hover {
-    margin-top: 0;
+    margin-top: 30px;
+}
+
+div#social-wrapper {
+    display: inline-block;
+    margin: 0 auto;
+    height: 150px;
+    width: 100%;
+}
+
+div#social-wrapper div {
+    display: inline-block;
+}
+
+div#social-wrapper div#resume-wrap {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    color: transparent;
+    padding-left: 25px;
+    padding-top: 0px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 /* Holds the position when navbar becomes fixed */
 div#nav-wrapper {
     height: 40px;
-}
-
-/* Used to position name-bg */
-div#bg-wrap {
-    position: absolute; 
-    right:50%;
-}
-
-/* Give bg to title */
-div#name-bg {
-    position: relative;
-    right: -50%;
-    height: 100px;
-    width: 620px;
-    margin-top: 26px;
-    background-color: rgba(46, 52, 54, 0.4);
-    z-index: 1;
 }
 
 footer div#footer-inner {
@@ -294,7 +303,7 @@ footer div#footer-inner {
 /******************************************************************************
  * Element: li
  *****************************************************************************/
-div#nav-wrapper li {
+nav#navbar li {
     padding: 12px 40px;
     display: inline-block;
 }
@@ -304,15 +313,20 @@ div#nav-wrapper li {
  *****************************************************************************/
 div#nav-wrapper nav#navbar {
     display: block;
-    background-color: #a9c0c6;
+    background-color: #333333;
     font-size: 1.6em;
     letter-spacing: 1px;
-    color: #333333;
+    color: #f3f4f5;
     z-index: 999;
     height: 40px;
     width: 100%;
-    -webkit-box-shadow: 0px 1px 1px 0px; 
-    box-shadow: 0px 1px 1px 0px; 
+    -webkit-box-shadow: 0px 1px 4px 0px #000000; 
+    -moz-box-shadow: 0px 1px 4px 0px #000000; 
+    box-shadow: 0px 1px 4px 0px #000000; 
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 
@@ -329,7 +343,10 @@ ul {
  *****************************************************************************/
 section {
     padding-top: 80px; /* Padding increases size of border for scrolling  */
+    width: 700px;
+    margin: 0 auto;
 }
+
 
 /******************************************************************************
  * Element: p
@@ -337,7 +354,6 @@ section {
 section p {
     font-size: 2em;
     text-align: left;
-    width: 700px;
     margin: 0 auto;
     line-height: 30px;
 }   
@@ -348,11 +364,18 @@ header p#description {
     margin: 20px auto;
 }
 
+#resume-wrap p#resume {
+    font-size: 5em; 
+    color: inherit;
+    line-height: 0px;
+}
+
 /******************************************************************************
  * Class: .sub-header
  *****************************************************************************/
 section .sub-header {
     margin: 0px auto 80px auto;
+    width: inherit;
 }
 
 /******************************************************************************
@@ -361,9 +384,11 @@ section .sub-header {
 footer {
     font-size: 11px;
     color: #9b9ca1;
+    background-color: #F3f4f5;
     letter-spacing: 2px;
     text-transform: uppercase;
     -webkit-box-shadow: 0px -1px 1px 0px; 
+    -moz-box-shadow: 0px -1px 1px 0px; 
     box-shadow: 0px -1px 1px 0px; 
 }
 
@@ -373,11 +398,6 @@ footer {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-h1 a {
-    position: relative;
-    z-index: 1000;
 }
 
 #social-links a {
@@ -422,6 +442,7 @@ h1 a {
 /* Used to make nav bar fixed when scrolling */
 .sticky {
     position: fixed;
+    opacity: 0.9;
     top: 0;
 }
 
@@ -432,4 +453,24 @@ h1 a {
     height: 38px;
     width: 38px;
     opacity: 0.6;
+}
+
+section#about img {
+    float: left;
+    margin: 0 20px 20px 0;
+    height: 160px;
+    width: 160px;
+}
+
+img#uparrow {
+    position: fixed;
+    bottom: 50%;
+    right: 0%;
+    opacity: 0.6;
+    height: 50px;
+    width: 50px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }

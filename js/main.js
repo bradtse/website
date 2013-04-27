@@ -16,8 +16,11 @@ $(document).ready(function() {
 
             if ($(window).scrollTop()>$top1) {
                 $('#navbar').addClass('sticky');
+                /* Check jquery alternative */
+                $('#uparrow').css({"opacity": "0.6", "right": "15%"});
             } else {
                 $('#navbar').removeClass('sticky');
+                $('#uparrow').css({"opacity": "0", "right": "0%"});
             }
     });
 
@@ -25,26 +28,34 @@ $(document).ready(function() {
     /*
      * Smooth scrolling animation
      */
-    function goToByScroll(id) {
-        id = id.replace("link", "");
-
+    function goToByScroll(href) {
         /*
          * Returns if already at correct position 
          * FIXME: find a better solution 
          */
         var $curPos = $(this).scrollTop();
-        var $goalPos = $("#" + id).offset().top;
+        var $goalPos = $(href).offset().top;
         if ($curPos == $goalPos) {
             return;
         }
 
-        $("html, body").stop(true).animate({scrollTop: $("#" + id).offset().top}, 400);
+        $("html, body").stop(true).animate({scrollTop: $(href).offset().top}, 500);
     }
 
-    $("#navbar > ul > li > a").click(function(event) {
+    $("a").click(function(event) {
+
+        /* Checks if anchor is local and returns if it is not. This was modified
+           to work on my localhost. FIXME*/
+        var href = $(this).attr("href"); 
+        var regExp = new RegExp("//" + location.host + "($|/)");
+        var isLocal = (href.indexOf("#") == "0") ? true : false;
+        if (isLocal != true) {
+            return;
+        }
+
         event.preventDefault(); 
        
-        goToByScroll($(this).attr("id")); 
+        goToByScroll(href); 
     });
 
     /*
@@ -58,7 +69,28 @@ $(document).ready(function() {
             $(this).find("img").stop(true).fadeTo(300, 0.6);
         }
     );
+
+    /*
+     * Fades in resume caption
+     */
+    $("#pdf").hover(
+        function() {
+            $("#resume-wrap").css({"padding-top": "50px", "color": "red"});
+        }, 
+        function() {
+            $("#resume-wrap").css({"padding-top": "0px", "color": "transparent"});
+        }
+    );
     
+    $("#uparrow").hover(
+        function() {
+                $(this).stop(true).fadeTo(50, 1);
+        },
+        function() {
+            $(this).stop(true).fadeTo(50, 0.6);
+        }
+    );
+
     /*
      * Fade in and out menu items
      */

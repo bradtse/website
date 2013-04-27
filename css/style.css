@@ -229,7 +229,7 @@ div#header-bg {
     background-image: url('../images/intro-bg4.jpg');
     background-repeat: no-repeat;
     background-color: #000000;
-    background-position: center 150%;
+    background-position: center -150px;
     background-attachment: fixed;
     width: 100%;
     height: 550px;
@@ -242,6 +242,12 @@ div#header-wrap {
     z-index: 200;
     text-align: center;
     padding-top: 120px;
+}
+
+div.container {
+    position: relative;
+    margin: 0 auto;
+    width: 700px;
 }
 
 div#social-links {
@@ -278,11 +284,11 @@ div#social-wrapper div {
 
 div#social-wrapper div#resume-wrap {
     position: absolute;
-    width: 70px;
+    width: 150px;
     height: 30px;
     color: transparent;
-    padding-left: 25px;
-    padding-top: 0px;
+    margin-left: 5px;
+    margin-top: 0;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -323,10 +329,10 @@ div#nav-wrapper nav#navbar {
     -webkit-box-shadow: 0px 1px 4px 0px #000000; 
     -moz-box-shadow: 0px 1px 4px 0px #000000; 
     box-shadow: 0px 1px 4px 0px #000000; 
-    -webkit-transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
 
@@ -343,8 +349,11 @@ ul {
  *****************************************************************************/
 section {
     padding-top: 80px; /* Padding increases size of border for scrolling  */
-    width: 700px;
     margin: 0 auto;
+}
+
+section#contact {
+    margin-bottom: 100px;
 }
 
 
@@ -358,6 +367,11 @@ section p {
     line-height: 30px;
 }   
 
+section p#contact-brief {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 header p#description {
     font-family: pacificoregular ;
     font-size: 3em;    
@@ -365,9 +379,11 @@ header p#description {
 }
 
 #resume-wrap p#resume {
-    font-size: 5em; 
+    font-size: 2.2em; 
+    font-family: molotregular;
+    padding-top: 3px;
+    text-align: left;
     color: inherit;
-    line-height: 0px;
 }
 
 /******************************************************************************
@@ -473,4 +489,12 @@ img#uparrow {
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
+}
+
+/******************************************************************************
+ * Class: img
+ *****************************************************************************/
+form {
+    text-align: left;
+    margin-top: 40px;
 }

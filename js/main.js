@@ -75,10 +75,12 @@ $(document).ready(function() {
      */
     $("#pdf").hover(
         function() {
-            $("#resume-wrap").css({"padding-top": "50px", "color": "red"});
+            $("#resume-wrap").css({"margin-top": "23px",
+                                   "color": "#333333"});
         }, 
         function() {
-            $("#resume-wrap").css({"padding-top": "0px", "color": "transparent"});
+            $("#resume-wrap").css({"margin-top": "0px", 
+                                   "color": "transparent"});
         }
     );
     

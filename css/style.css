@@ -239,8 +239,6 @@ div#header-bg {
     background-position: center bottom;
     background-attachment: fixed;
     z-index: 100;
-    background-size: cover;
-    -webkit-background-size: cover;
 }
 
 div#social-links {

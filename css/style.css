@@ -196,7 +196,7 @@ section h2 {
 header h1 {
     font-size: 16em;
     color: #f6a053;
-    margin: 120px 0 40px 0;
+    margin: 0 0 32px 0;
 }
 
 /******************************************************************************
@@ -206,7 +206,6 @@ header {
     height:550px;
     width: 100%;
     text-align: center;
-    overflow: hidden; /* Hides h1's overflow margin */
 }
 
 /******************************************************************************
@@ -222,23 +221,24 @@ header {
 /******************************************************************************
  * Element: div
  *****************************************************************************/
+div#header-bg {
+    position: absolute;
+    background-image: url('../images/airplane-bg-gausblur.png');
+    background-repeat: no-repeat;
+    background-color: #2e3436;
+    background-position: center 152%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 550px;
+    z-index: 100;
+}
+
 div#header-wrap {
     position: relative;
     width: 100%;
     z-index: 200;
     text-align: center;
-}
-
-div#header-bg {
-    width: 100%;
-    height: 550px;
-    position: absolute;
-    background-image: url('../images/airplane-bg-gausblur.png');
-    background-repeat: no-repeat;
-    background-color: #2e3436;
-    background-position: center bottom;
-    background-attachment: fixed;
-    z-index: 100;
+    padding-top: 120px;
 }
 
 div#social-links {
@@ -280,24 +280,6 @@ div#name-bg {
     margin-top: 26px;
     background-color: rgba(46, 52, 54, 0.4);
     z-index: 1;
-}
-
-div#penguin {
-    position: absolute;
-    height: 40px;
-    width: 55px;
-    bottom: 0;
-    right: 25%;
-    background-image: url("../images/p3.gif");
-    background-repeat: no-repeat;
-    background-position: -5px -25px;
-    background-size: 65px 65px;
-}
-
-div#broken {
-    position: absolute;
-    font-size: 2em;
-    margin-top: 20px
 }
 
 footer div#footer-inner {

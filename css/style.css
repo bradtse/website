@@ -174,7 +174,8 @@ body {
     text-align: center;
     color: #7e8289; 
     /* FIXME Need to do for all browsers */
-    background: linear-gradient(to bottom, #f7f7f8 0%, #f2f3f4 100%);
+    background-image: url("../images/ps_neutral.png");
+    /*background: linear-gradient(to bottom, #f7f7f8 0%, #f2f3f4 100%);*/
     margin: 0 auto;
 }
 
@@ -194,8 +195,8 @@ section h2 {
 
 header h1 {
     font-size: 16em;
-    color: #f2f3f4;
-    margin: 110px 0 40px 0;
+    color: #f6a053;
+    margin: 120px 0 40px 0;
 }
 
 /******************************************************************************
@@ -203,11 +204,8 @@ header h1 {
  *****************************************************************************/
 header {
     height:550px;
-    background-image: url('../images/airplane-bg-gausblur.png');
-    background-repeat: no-repeat;
-    background-color: #2e3436;
-    background-position: center 57%;
     width: 100%;
+    text-align: center;
     overflow: hidden; /* Hides h1's overflow margin */
 }
 
@@ -224,6 +222,27 @@ header {
 /******************************************************************************
  * Element: div
  *****************************************************************************/
+div#header-wrap {
+    position: relative;
+    width: 100%;
+    z-index: 200;
+    text-align: center;
+}
+
+div#header-bg {
+    width: 100%;
+    height: 550px;
+    position: absolute;
+    background-image: url('../images/airplane-bg-gausblur.png');
+    background-repeat: no-repeat;
+    background-color: #2e3436;
+    background-position: center bottom;
+    background-attachment: fixed;
+    z-index: 100;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
 div#social-links {
     margin-top: 80px;
 }
@@ -260,8 +279,8 @@ div#name-bg {
     right: -50%;
     height: 100px;
     width: 620px;
-    margin-top: 30px;
-    background-color: rgba(46, 52, 54, 0.2);
+    margin-top: 26px;
+    background-color: rgba(46, 52, 54, 0.4);
     z-index: 1;
 }
 

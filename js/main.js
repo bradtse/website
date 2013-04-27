@@ -38,7 +38,7 @@ $(document).ready(function() {
             return;
         }
 
-        $("html, body").stop(true).animate({scrollTop: $("#" + id).offset().top}, 700);
+        $("html, body").stop(true).animate({scrollTop: $("#" + id).offset().top}, 400);
     }
 
     $("#navbar > ul > li > a").click(function(event) {
@@ -55,7 +55,7 @@ $(document).ready(function() {
             $(this).find("img").stop(true).fadeTo(300, 1);
         },
         function() {
-            $(this).find("img").stop(true).fadeTo(300, 0.5);
+            $(this).find("img").stop(true).fadeTo(300, 0.6);
         }
     );
     

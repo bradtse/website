@@ -226,7 +226,7 @@ header {
  *****************************************************************************/
 div#header-bg {
     position: absolute;
-    background-image: url('../images/intro-bg4.jpg');
+    background-image: url('../images/header-bg.jpg');
     background-repeat: no-repeat;
     background-color: #000000;
     background-position: center center;

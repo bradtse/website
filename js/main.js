@@ -75,7 +75,7 @@ $(document).ready(function() {
      */
     $("#pdf").hover(
         function() {
-            $("#resume-wrap").css({"margin-top": "23px",
+            $("#resume-wrap").css({"margin-top": "25px",
                                    "color": "#333333"});
         }, 
         function() {

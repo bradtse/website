@@ -135,12 +135,20 @@ h1, h2 {
 
 h2 {
     font-size: 7em;
+    color: #333;
     margin: 20px auto;
 }
 
 h1 {
     font-size: 15em;
     margin: 0 0 32px 0;
+}
+
+h3 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    margin: 25px 0;
 }
 
 a {
@@ -359,12 +367,31 @@ header {
     display: inline-block;
     vertical-align: top;
     width: auto;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 #contact-info {
     display: inline;
 }
+
+#info-wrapper li {
+    margin-bottom: 15px;
+}
+
+#info-wrapper img, p {
+    display: inline-block;
+}
+
+#info-wrapper img {
+    margin-right: 20px;
+}
+
+#phone {
+    margin-left: 5px;
+    padding-right: 6px;
+    
+}
+
 
 /******************************************************************************
  * Tag: footer
@@ -387,22 +414,17 @@ footer {
     margin: 0 auto;
 }
 
-footer p {
-    display: inline-block;  
-}
-
 footer a {
     text-decoration: underline;
 }
 
 .float-left {
-    margin-right: 80px;
+    float: left;
 }
 
 .float-right {
-    margin-left: 100px;
+    float: right;
 }
-
 
 /* Used for sprites
 

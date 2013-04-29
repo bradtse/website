@@ -19,11 +19,11 @@
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 
     <!-- Javascript -->
-    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="js/jquery.hoverIntent.minified.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
     <script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
     <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+
 
     <!-- HTML5 support for IE version 8 and below -->
     <!--[if lte IE 8]>
@@ -44,6 +44,11 @@
 
 <body>
 
+    <!-- Fixed up arrow -->
+    <a href="#header">
+        <img id="uparrow" src="images/up-arrow-icon.png"/>
+    </a>
+
     <!-- Header -->
     <header id="header">
         <div id="header-bg"></div>
@@ -59,22 +64,22 @@
                     <div id="resume-wrap">
                         <p id="resume">Get my resume!</p>
                     </div>
-                    <div id="pdf">
+                    <div class="social-link" id="pdf">
                         <a href="files/bradleytse-resume.pdf">
                             <img class="social-img" src="images/PDF-download-icon.png"/>
                         </a>
                     </div>
-                    <div id="twitter">
+                    <div class="social-link" id="twitter">
                         <a title="Twitter" href="http://twitter.com/bradleytse">
                             <img class="social-img" src="images/twitter-icon.png"/>
                         </a>
                     </div>
-                    <div id="linkedin">
+                    <div class="social-link" id="linkedin">
                         <a title="LinkedIn"href="http://linkedin.com/in/bradleytse">
                             <img class="social-img" src="images/linkedin-icon.png"/>
                         </a>
                     </div>
-                    <div id="github">
+                    <div class="social-link" id="github">
                         <a title="Github" href="http://github.com/bradtse">
                             <img class="social-img" src="images/GitHub-Mark.png"/>
                         </a>
@@ -101,22 +106,18 @@
     <div id="nav-wrapper">
         <nav id="navbar">
             <ul>
-                <li><a href="#header" id="headerlink">Home</a></li>
-                <li><a href="#about" id="aboutlink">About</a></li>
-                <li><a href="#work" id="worklink">Work</a></li>
-                <li><a href="#contact" id="contactlink">Contact</a></li>
+                <li class="nav-item"><a href="#header" id="headerlink">Home</a></li>
+                <li class="nav-item"><a href="#about" id="aboutlink">About</a></li>
+                <li class="nav-item"><a href="#work" id="worklink">Work</a></li>
+                <li class="nav-item"><a href="#contact" id="contactlink">Contact</a></li>
             </ul>
         </nav>
     </div>
 
-    <a href="#header">
-        <img id="uparrow" src="images/up-arrow-icon.png"/>
-    </a>
-
-    <!-- About -->
+    <!-- About Me -->
     <section id="about">
-        <div class="container">
-            <div class="sub-header">
+        <div class="text-container">
+            <div class="section-header">
                 <div class="horiz-line"></div>
                 <h2>About Me</h2>
                 <div class="horiz-line"></div>
@@ -168,6 +169,7 @@
                 coding and finding solutions to problems.
             </p>
             <p class="question">
+                What are your interests?
             </p>
             <p class="answer">
             </p>
@@ -181,8 +183,8 @@
 
     <!-- Work -->
     <section id="work">
-        <div class="container">
-            <div class="sub-header">
+        <div class="text-container">
+            <div class="section-header">
                 <div class="horiz-line"></div>
                 <h2>My Work</h2>
                 <div class="horiz-line"></div>
@@ -196,14 +198,14 @@
 
     <!-- Contact Me -->
     <section id="contact">
-        <div class="container">
-            <div class="sub-header">
+        <div class="text-container">
+            <div class="section-header">
                 <div class="horiz-line"></div>
                 <h2>Contact Me</h2>
                 <div class="horiz-line"></div>
             </div>
-            <p id="contact-brief">
-                Feel free to contact me about anything at all. Please don't hesitate!
+            <p>
+                Feel free to contact me about anything at all. 
             </p>
 
             <div id="contact-wrapper">
@@ -212,7 +214,7 @@
                         <li>
                             <p>Name:</p> 
                             <input type="text" name="name" id="name" 
-                            placeholder="name" value=""/>
+                            placeholder="John Doe" value=""/>
                         </li>
                         <li>
                             <p>Email:</p> 
@@ -235,7 +237,7 @@
                         <p>Email: bradleytse at gmail dot com</p>
                         <p>Phone:</p>
                     </div>
-                    <div id="social-links">
+                    <div>
                     </div>
                 </div>
             </div>
@@ -245,9 +247,9 @@
     <!-- Footer -->
     <footer>
         <div id="footer-inner">
-           <p class="float-left">Created by Bradley Tse</p>
-           <p class="float-right">The source code has been minified. Legible source can 
-            be found on my GitHub</p>
+           <p class="float-left">Designed and coded by Bradley Tse</p>
+           <p class="float-right">The code has been minified. Readable source code can 
+            be found on my <a href="http://github.com/bradtse">GitHub</a></p>
         </div>
     </footer>
 

@@ -124,6 +124,15 @@ body {
     transition: all 0.4s ease;
 }
 
+#under {
+    position: fixed;
+    height: 10em;
+    width: 25em;
+    left: 10px;
+    top: 50px;
+    z-index: 10000;
+}
+
 /******************************************************************************
  * Reused items 
  *****************************************************************************/
@@ -349,18 +358,29 @@ header {
 }
 
 #submit-form {
-    text-align: left;
     display: inline-block;
-    margin: 0;
     width: 400px;
 }
 
-#submit-form input, textarea {
+.sub-title {
+    font-weight: bold;
+    font-size: 1.7em;
+    color: #333;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.sub-input {
     width: 100%;
 }
 
-#submit-form textarea {
+#comments {
     height: 150px;
+}
+
+#submit {
+    margin-top: 10px;
+    width: 60px;
 }
 
 #info-wrapper {
@@ -370,26 +390,22 @@ header {
     margin-left: 50px;
 }
 
-#contact-info {
-    display: inline;
-}
-
-#info-wrapper li {
+.info-item {
     margin-bottom: 15px;
 }
 
-#info-wrapper img, p {
+.info-text {
+    font-size: 1.7em;
     display: inline-block;
 }
 
-#info-wrapper img {
+.info-img {
     margin-right: 20px;
 }
 
 #phone {
     margin-left: 5px;
     padding-right: 6px;
-    
 }
 
 

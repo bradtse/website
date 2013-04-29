@@ -96,8 +96,5 @@ $(document).ready(function() {
     /*
      * Fade in and out menu items
      */
-    $("#navbar > ul > li > a").hover(
-        
-    );
-
+    
 });

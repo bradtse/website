@@ -188,7 +188,7 @@ h1, h2 {
     font-family: bebas_neueregular;
 }
 
-section h2 {
+h2 {
     font-size: 7em;
     margin: 20px auto;
 }
@@ -242,13 +242,6 @@ div.container {
     width: 750px;
 }
 
-div#social-links {
-    position: relative;
-    margin: 0 0 0 0;
-    height: 80px;
-    width: auto;
-}
-
 /* FIXME: Convert this to using the image instead */
 div#social-links div {
     display: inline-block;
@@ -260,21 +253,26 @@ div#social-links div {
     transition: margin-top 0.3s ease;
 }
 
-div#social-links div:hover {
+#social-links {
+    position: relative;
+    height: 80px;
+}
+
+#social-links div:hover {
     margin-top: 30px;
 }
 
-div#social-wrapper {
-    position: relative;
+#social-wrapper {
     margin: 0 auto;
     height: 100px;
 }
 
-div#social-wrapper div {
+#social-wrapper div {
     display: inline-block;
 }
 
-div#social-wrapper div#resume-wrap {
+/* FIXME: Remove div causes weird bug */
+div div#resume-wrap {
     position: absolute;
     width: 100px;
     height: 30px;
@@ -314,7 +312,7 @@ footer div#footer-inner {
 /******************************************************************************
  * Tag: li
  *****************************************************************************/
-nav#navbar li {
+#navbar li {
     padding: 12px 40px;
     display: inline-block;
 }
@@ -322,8 +320,7 @@ nav#navbar li {
 /******************************************************************************
  * Tag: nav
  *****************************************************************************/
-div#nav-wrapper nav#navbar {
-    display: block;
+#navbar {
     background-color: #333333;
     font-size: 1.6em;
     letter-spacing: 1px;
@@ -361,7 +358,7 @@ section {
     margin: 0 auto;
 }
 
-section#contact {
+#contact {
     margin-bottom: 100px;
 }
 
@@ -382,11 +379,10 @@ section p {
     margin: 20px auto;
 }
 
-#resume-wrap p#resume {
+#resume {
     font-size: 2.2em; 
     font-family: molotregular;
     text-align: left;
-    color: inherit;
 }
 
 p.question {
@@ -437,20 +433,13 @@ footer {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-#social-links a {
-    display: block;
-}
-
-#navbar ul li a {
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
 
-#navbar ul li a:hover {
+#navbar a:hover {
     color: #f38237;
 }
 
@@ -488,7 +477,7 @@ a {
 /******************************************************************************
  * Tag: img
  *****************************************************************************/
-#social-links img {
+.social-img {
     height: 38px;
     width: 38px;
     opacity: 0.6;
@@ -501,13 +490,13 @@ section#about img {
     width: 160px;
 }
 
-img#uparrow {
+#uparrow {
     position: fixed;
     bottom: 50%;
     right: 0%;
-    opacity: 0;
     height: 50px;
     width: 50px;
+    opacity: 0;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;

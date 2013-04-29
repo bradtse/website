@@ -247,7 +247,7 @@ div#header-wrap {
 div.container {
     position: relative;
     margin: 0 auto;
-    width: 700px;
+    width: 750px;
 }
 
 div#social-links {
@@ -302,6 +302,19 @@ div#nav-wrapper {
     height: 40px;
 }
 
+div#contact-wrapper {
+    width: inherit;
+    text-align: left;
+    margin-top: 50px;
+}
+
+div#info-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    margin-left: 20px;
+}
+
 footer div#footer-inner {
     width: 1024px;
     margin: 0 auto;
@@ -344,6 +357,10 @@ div#nav-wrapper nav#navbar {
 ul {
     list-style: none outside;
     margin: 0 auto;
+}
+
+ul#contact-info {
+    display: inline;
 }
 
 /******************************************************************************
@@ -390,10 +407,21 @@ header p#description {
 p.question {
     margin: 30px 0 5px 0;
     font-weight: bold;
+    font-size: 2.2em;
 }
 
 p.answer {
+}
 
+footer p {
+    display: inline-block;  
+}
+
+.float-left {
+    margin-right: 80px;
+}
+
+.float-right {
 }
 
 /******************************************************************************
@@ -473,7 +501,7 @@ a {
 }
 
 /******************************************************************************
- * Class: img
+ * Element: img
  *****************************************************************************/
 #social-links img {
     height: 38px;
@@ -492,7 +520,7 @@ img#uparrow {
     position: fixed;
     bottom: 50%;
     right: 0%;
-    opacity: 0.6;
+    opacity: 0;
     height: 50px;
     width: 50px;
     -webkit-transition: all 0.4s ease;
@@ -502,9 +530,23 @@ img#uparrow {
 }
 
 /******************************************************************************
- * Class: img
+ * Element: form 
  *****************************************************************************/
-form {
+form#submit-form {
     text-align: left;
-    margin-top: 40px;
+    display: inline-block;
+    margin: 0;
+    width: 400px;
+}
+
+/******************************************************************************
+ * Element: input
+ *****************************************************************************/
+#submit-form input, textarea {
+    width: 100%;
+    text-transform: uppercase; 
+}
+
+#submit-form textarea {
+    height: 150px;
 }

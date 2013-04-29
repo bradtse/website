@@ -166,7 +166,7 @@ table {
 }
 
 /******************************************************************************
- * Element: Body
+ * Tag: Body
  *****************************************************************************/
 body {
     font-family: "Source Sans Pro", sans-serif;
@@ -180,7 +180,7 @@ body {
 }
 
 /******************************************************************************
- * Element: Headers
+ * Tag: Headers
  *****************************************************************************/
 h1, h2 {
     position: relative;
@@ -193,21 +193,18 @@ section h2 {
     margin: 20px auto;
 }
 
-header h1 {
+h1 {
     font-size: 15em;
     margin: 0 0 32px 0;
 }
 
-h1, p {
-    color: #333333
-}
-
 /******************************************************************************
- * Element: Header
+ * Tag: Header
  *****************************************************************************/
 header {
     height:550px;
     width: 100%;
+    color: #333333;
     text-align: center;
 }
 
@@ -222,25 +219,20 @@ header {
 }
 
 /******************************************************************************
- * Element: div
+ * Tag: div
  *****************************************************************************/
-div#header-bg {
+#header-bg {
     position: absolute;
-    background-image: url('../images/header-bg.jpg');
-    background-repeat: no-repeat;
-    background-color: #000000;
-    background-position: center center;
-    background-attachment: fixed;
+    background: url('../images/header-bg.jpg') no-repeat fixed center center #000000;
+    height: inherit;
     width: 100%;
-    height: 550px;
     z-index: 100;
 }
 
-div#header-wrap {
+#header-wrap {
     position: relative;
-    width: 100%;
+    height: 100%;
     z-index: 200;
-    text-align: center;
     padding-top: 120px;
 }
 
@@ -274,10 +266,8 @@ div#social-links div:hover {
 
 div#social-wrapper {
     position: relative;
-    display: inline-block;
     margin: 0 auto;
-    height: 150px;
-    width: 100%;
+    height: 100px;
 }
 
 div#social-wrapper div {
@@ -322,7 +312,7 @@ footer div#footer-inner {
 }
 
 /******************************************************************************
- * Element: li
+ * Tag: li
  *****************************************************************************/
 nav#navbar li {
     padding: 12px 40px;
@@ -330,7 +320,7 @@ nav#navbar li {
 }
 
 /******************************************************************************
- * Element: nav
+ * Tag: nav
  *****************************************************************************/
 div#nav-wrapper nav#navbar {
     display: block;
@@ -352,7 +342,7 @@ div#nav-wrapper nav#navbar {
 
 
 /******************************************************************************
- * Element: ul
+ * Tag: ul
  *****************************************************************************/
 ul {
     list-style: none outside;
@@ -364,7 +354,7 @@ ul#contact-info {
 }
 
 /******************************************************************************
- * Element: section
+ * Tag: section
  *****************************************************************************/
 section {
     padding-top: 80px; /* Padding increases size of border for scrolling  */
@@ -377,7 +367,7 @@ section#contact {
 
 
 /******************************************************************************
- * Element: p
+ * Tag: p
  *****************************************************************************/
 section p {
     font-size: 2em;
@@ -386,12 +376,7 @@ section p {
     line-height: 30px;
 }   
 
-section p#contact-brief {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-header p#description {
+#description {
     font-family: pacificoregular ;
     font-size: 3em;    
     margin: 20px auto;
@@ -433,7 +418,7 @@ section .sub-header {
 }
 
 /******************************************************************************
- * Element: footer
+ * Tag: footer
  *****************************************************************************/
 footer {
     font-size: 11px;
@@ -447,7 +432,7 @@ footer {
 }
 
 /******************************************************************************
- * Element: a
+ * Tag: a
  *****************************************************************************/
 a {
     text-decoration: none;
@@ -501,7 +486,7 @@ a {
 }
 
 /******************************************************************************
- * Element: img
+ * Tag: img
  *****************************************************************************/
 #social-links img {
     height: 38px;
@@ -530,7 +515,7 @@ img#uparrow {
 }
 
 /******************************************************************************
- * Element: form 
+ * Tag: form 
  *****************************************************************************/
 form#submit-form {
     text-align: left;
@@ -540,7 +525,7 @@ form#submit-form {
 }
 
 /******************************************************************************
- * Element: input
+ * Tag: input
  *****************************************************************************/
 #submit-form input, textarea {
     width: 100%;

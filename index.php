@@ -211,22 +211,25 @@
             </p>
 
             <div id="contact-wrapper">
-                <form id="submit-form">
+                <form id="submit-form" action="submit.php" method="post">
+                    <input type="hidden" name="redirect" value="http://google.com"/>
                     <ul>
                         <li>
-                            <p class="sub-title">Name:</p> 
-                            <input type="text" class="sub-input" name="name" id="name" 
-                            placeholder="John Doe" value=""/>
+                            <label for="name"><p class="sub-title">Name:</p></label>
+                            <input type="text" class="sub-input" name="name" 
+                            id="name" placeholder="John Doe" value="" required/>
                         </li>
                         <li>
-                            <p class="sub-title">Email:</p> 
-                            <input type="text" class="sub-input" name="email" id="email"
-                            placeholder="johndoe@example.com" value=""/>
+                            <label for="email"><p class="sub-title">Email:</p></label>
+                            <input type="email" class="sub-input" name="email" 
+                            id="email" placeholder="johndoe@example.com" value=""
+                            required/>
                         </li>
                         <li>
-                            <p class="sub-title">Message:</p> 
-                            <textarea name="comments" class="sub-input" id="comments"
-                            placeholder="Enter your message here"></textarea>
+                            <label for="comments"><p class="sub-title">Message:</p></label>
+                            <textarea class="sub-input" name="comments" 
+                            id="comments" placeholder="Enter your message here"
+                            required></textarea>
                         </li>
                         <li>
                             <input type="submit" id="submit" value="submit"/>

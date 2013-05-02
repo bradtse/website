@@ -8,20 +8,20 @@
 $(document).ready(function() {
 
     /*
-     * Sticky nav bar 
+     * Change stuff on scroll 
      */
-    var $top1 = $('#navbar').offset().top;
+    var $top1 = $('#navbar').offset().top + 80;
 
     $(window).scroll(function() {   
 
-            if ($(window).scrollTop()>$top1) {
-                $('#navbar').addClass('sticky');
-                /* Check jquery alternative */
-                $('#uparrow').css({"opacity": "0.6", "right": "15%"});
-            } else {
-                $('#navbar').removeClass('sticky');
-                $('#uparrow').css({"opacity": "0", "right": "0%"});
-            }
+        if ($(window).scrollTop()>$top1) {
+            $('#navbar').addClass('opaque');
+            /* Check jquery alternative */
+            $('#uparrow').css({"opacity": "0.6", "right": "15%"});
+        } else {
+            $('#navbar').removeClass('opaque');
+            $('#uparrow').css({"opacity": "0", "right": "0%"});
+        }
     });
 
 

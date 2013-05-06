@@ -20,6 +20,7 @@
 
     <!-- Javascript -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
     <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
@@ -39,80 +40,56 @@
         </script>
     <![endif]-->
 </head>
-    
+
 
 <body>
 
     <!-- Navigation Bar -->
     <div class="left">
-        <div class="bg"></div>
-        <nav class="navbar gradient">
-            <ul>
+        <div class="name">
+            <h1>Bradley<br>Tse</h1> 
+        </div>
+        <div class="bg gradient"></div>
+        <nav id="navbar">
+            <ul class="navlist">
                 <li class="nav-item"><a href="#header" id="headerlink">Home</a></li>
                 <li class="nav-item"><a href="#about" id="aboutlink">About</a></li>
                 <li class="nav-item"><a href="#work" id="worklink">Work</a></li>
                 <li class="nav-item"><a href="#contact" id="contactlink">Contact</a></li>
             </ul>
+            <div id="vertical"></div>
         </nav>
+        <div id="social-links">
+            <div class="social-link" id="pdf">
+                <a href="files/bradleytse-resume.pdf">
+                    <img class="social-img" src="images/PDF-download-icon.png"/>
+                </a>
+            </div>
+        </div>
+        <div id="info-wrapper">
+            <h3>Contact Info</h3>
+            <ul>
+                <li class="info-item">
+                    <img class="info-img" src="images/email.png"/>
+                    <p class="info-text">bradleytse at gmail dot com</p>
+                </li>
+                <li class="info-item">
+                    <img class="info-img" id="phone" src="images/phone.png"/>
+                    <p class="info-text">Contact me for it</p>
+                </li>
+                <li class="info-item">
+                    <img class="info-img" src="images/home.png"/>
+                    <p class="info-text">MD, US</p>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div class="right">
-        <!-- Header -->
-        <header id="header">
-            <div id="header-wrap">
-                <h1>
-                    <a href="index.html">Bradley Tse</a>
-                </h1>
-            
-                <p id="description">Software Engineer.</p> 
-
-                <div id="social-wrapper">
-                    <div id="social-links">
-                        <div id="resume-wrap">
-                            <p id="resume">Get my resume!</p>
-                        </div>
-                        <div class="social-link" id="pdf">
-                            <a href="files/bradleytse-resume.pdf">
-                                <img class="social-img" src="images/PDF-download-icon.png"/>
-                            </a>
-                        </div>
-                        <div class="social-link" id="twitter">
-                            <a title="Twitter" href="http://twitter.com/bradleytse">
-                                <img class="social-img" src="images/twitter-icon.png"/>
-                            </a>
-                        </div>
-                        <div class="social-link" id="linkedin">
-                            <a title="LinkedIn"href="http://linkedin.com/in/bradleytse">
-                                <img class="social-img" src="images/linkedin-icon.png"/>
-                            </a>
-                        </div>
-                        <div class="social-link" id="github">
-                            <a title="Github" href="http://github.com/bradtse">
-                                <img class="social-img" src="images/GitHub-Mark.png"/>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Sprite method 
-            <ul id="social-links">
-                <li id="twitter">
-                    <a href="http://twitter.com/bradleytse"></a>
-                </li>
-                <li id="linkedin">
-                    <a href="http://linkedin.com/in/bradleytse"></a>
-                </li>
-                <li id="github">
-                    <a href="http://github.com/bradtse"></a>
-                </li>
-            </ul> -->
-        </header>
-
-
+        <div class="right-bg"></div>
         <!-- About Me -->
         <section id="about">
-            <div class="text-container">
+            <div class="chunk">
                 <div class="section-header">
                     <div class="horiz-line"></div>
                     <h2>About Me</h2>
@@ -176,10 +153,10 @@
                 </p>
             </div>
         </section>
-
+        <section></section>
         <!-- Work -->
         <section id="work">
-            <div class="text-container">
+            <div class="chunk">
                 <div class="section-header">
                     <div class="horiz-line"></div>
                     <h2>My Work</h2>
@@ -191,10 +168,11 @@
                 </p>
             </div>
         </section>
-
+        <section></section>
+        <!-- Work -->
         <!-- Contact Me -->
         <section id="contact">
-            <div class="text-container">
+            <div class="chunk">
                 <div class="section-header">
                     <div class="horiz-line"></div>
                     <h2>Contact Me</h2>
@@ -230,36 +208,11 @@
                             </li>
                         </ul>
                     </form>
-                    <div id="info-wrapper">
-                        <h3>Contact Info</h3>
-                        <ul>
-                            <li class="info-item">
-                                <img class="info-img" src="images/email.png"/>
-                                <p class="info-text">bradleytse at gmail dot com</p>
-                            </li>
-                            <li class="info-item">
-                                <img class="info-img" id="phone" src="images/phone.png"/>
-                                <p class="info-text">Contact me for it</p>
-                            </li>
-                            <li class="info-item">
-                                <img class="info-img" src="images/home.png"/>
-                                <p class="info-text">MD, US</p>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div id="footer-inner">
-           <p class="float-left">Designed and coded by Bradley Tse</p>
-           <p class="float-right">The code has been minified. Readable source code can 
-            be found on my <a href="http://github.com/bradtse">GitHub</a></p>
-        </div>
-    </footer>
 
 </body> 
 </html>

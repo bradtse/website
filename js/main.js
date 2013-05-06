@@ -1,37 +1,20 @@
-/* 
+/*
  * Author: Bradley Tse
  * Email: bradleytse@gmail.com
  * Date: April 2013
- * 
+ *
  */
 
 $(document).ready(function() {
 
-    /*
-     * Sticky nav bar 
-     */
-    var $top1 = $('#navbar').offset().top;
-
-    $(window).scroll(function() {   
-
-            if ($(window).scrollTop()>$top1) {
-                $('#navbar').addClass('sticky');
-                /* Check jquery alternative */
-                $('#uparrow').css({"opacity": "0.6", "right": "15%"});
-            } else {
-                $('#navbar').removeClass('sticky');
-                $('#uparrow').css({"opacity": "0", "right": "0%"});
-            }
-    });
-
-
+    jQuery.easing.def = "easeOutCubic"
     /*
      * Smooth scrolling animation
      */
     function goToByScroll(href) {
         /*
-         * Returns if already at correct position 
-         * FIXME: find a better solution 
+         * Returns if already at correct position
+         * FIXME: find a better solution
          */
         var $curPos = $(this).scrollTop();
         var $goalPos = $(href).offset().top;
@@ -39,23 +22,26 @@ $(document).ready(function() {
             return;
         }
 
-        $("html, body").stop(true).animate({scrollTop: $(href).offset().top}, 500);
+        $("html, body").stop().animate({
+            scrollTop: $(href).offset().top
+        }, 900);
     }
 
-    $("a").click(function(event) {
+    function moveVertical(position) {
+        var $curr = parseInt($("#vertical").css("top"), 10);
+        var $move = parseInt(position.top, 10) - $curr + 9;
+        $("#vertical").stop().animate({
+            "top":$curr + $move + "px"
+        }, 900);
+    }
 
-        /* Checks if anchor is local and returns if it is not. This was modified
-           to work on my localhost. FIXME*/
-        var href = $(this).attr("href"); 
-        var regExp = new RegExp("//" + location.host + "($|/)");
-        var isLocal = (href.indexOf("#") == "0") ? true : false;
-        if (isLocal != true) {
-            return;
-        }
+    $("#navbar a").click(function(event) {
+        event.preventDefault();
 
-        event.preventDefault(); 
-       
-        goToByScroll(href); 
+        var href = $(this).attr("href");
+
+        goToByScroll(href);
+        moveVertical($(this).position());
     });
 
     /*
@@ -77,24 +63,10 @@ $(document).ready(function() {
         function() {
             $("#resume-wrap").css({"margin-top": "25px",
                                    "color": "#333333"});
-        }, 
+        },
         function() {
-            $("#resume-wrap").css({"margin-top": "0px", 
+            $("#resume-wrap").css({"margin-top": "0px",
                                    "color": "transparent"});
         }
     );
-    
-    $("#uparrow").hover(
-        function() {
-                $(this).stop(true).fadeTo(50, 1);
-        },
-        function() {
-            $(this).stop(true).fadeTo(50, 0.6);
-        }
-    );
-
-    /*
-     * Fade in and out menu items
-     */
-    
 });

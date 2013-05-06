@@ -1,4 +1,4 @@
-/* 
+/*
  * Author: Bradley Tse
  * Date: April 2013
  * Email: bradleytse@gmail.com
@@ -6,7 +6,7 @@
  * Main CSS file.
  * I organized everything by grouping similar elements together.
  *
- * I didn't really follow the idea of "more classes less IDs", but 
+ * I didn't really follow the idea of "more classes less IDs", but
  * this worked fine for my small personal website.
  */
 
@@ -45,6 +45,20 @@
          url('./fonts/molot-webfont.woff') format('woff'),
          url('./fonts/molot-webfont.ttf') format('truetype'),
          url('./fonts/molot-webfont.svg#molotregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'patua_oneregular';
+    src: url('./fonts/patuaone-regular-webfont.eot');
+    src: url('./fonts/patuaone-regular-webfont.eot?#iefix')
+             format('embedded-opentype'),
+         url('./fonts/patuaone-regular-webfont.woff') format('woff'),
+         url('./fonts/patuaone-regular-webfont.ttf') format('truetype'),
+         url('./fonts/patuaone-regular-webfont.svg#patua_oneregular')
+             format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -104,8 +118,13 @@ body {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 62.5%; /* Downsizes it to 10px */
     text-align: center;
-    color: #7e8289; 
+    color: #7e8289;
+    height: 100%;
     /*background: linear-gradient(to bottom, #f7f7f8 0%, #f2f3f4 100%);*/
+}
+
+html {
+    height: 100%;
 }
 
 #uparrow {
@@ -122,7 +141,7 @@ body {
 }
 
 /******************************************************************************
- * Reused items 
+ * Reused items
  *****************************************************************************/
 h1, h2 {
     position: relative;
@@ -137,7 +156,8 @@ h2 {
 }
 
 h1 {
-    font-size: 15em;
+    font-size: 5em;
+    color: #ffffff;
     margin: 0 0 32px 0;
 }
 
@@ -158,26 +178,26 @@ a {
 }
 
 section {
-    padding: 80px 0 20px 0; /* Padding increases size of border for scrolling  */
+    padding: 0 0 0px 0; /* Padding increases size of border for scrolling */
     margin: 0 auto;
+    height: 100%;
 }
 
-.text-container {
-    margin: 0 auto;
-    width: 700px;
+.chunk {
+    width: 650px;
+    padding: 0 10px 0 30px;
 }
 
 .section-header {
-    margin: 0 auto 80px auto;
     width: inherit;
 }
 
 section p {
-    font-size: 1.8em;
+    font-size: 1.5em;
     text-align: left;
     margin: 0 auto;
     line-height: 30px;
-}   
+}
 
 .horiz-line {
     position: relative;
@@ -194,28 +214,40 @@ ul {
     position: fixed;
     height: 100%;
     width: 33%;
-    z-index: 100;
+    background: url("../images/random_grey_variations.png") repeat;
+    -webkit-box-shadow: 2px 0px 6px 0px;
+    -moz-box-shadow: 2px 0px 6px 0px;
+    box-shadow: 2px 0px 6px 0px;
 }
 
 .right {
     float: right;
+    position: relative;
+    z-index: 1;
     width: 67%;
+    height: 100%;
+}
+
+.right-bg {
     background: url("../images/bright_squares.png");
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: fixed;
 }
 
 .bg {
     position: absolute;
-    background: url("../images/random_grey_variations.png") repeat;
     height: 100%;
     width: 100%;
-    z-index: 100;
+    z-index: -1;
 }
 
 /******************************************************************************
  * Header
  *****************************************************************************/
 header {
-    height:550px;
+    height:200px;
     color: #333333;
     text-align: center;
 }
@@ -229,7 +261,7 @@ header {
 
 #description {
     font-family: pacificoregular ;
-    font-size: 3em;    
+    font-size: 3em;
     margin: 20px auto;
 }
 
@@ -274,7 +306,7 @@ header {
 }
 
 #resume {
-    font-size: 2.2em; 
+    font-size: 2.2em;
     font-family: molotregular;
     text-align: left;
 }
@@ -282,39 +314,53 @@ header {
 /******************************************************************************
  * Navigation
  *****************************************************************************/
-.navbar {
-    position: absolute;
+#navbar {
+    position: relative;
     z-index: 200;
-    font-size: 5.5em;
+    font-size: 4.5em;
+    font-family: "bebas_neueregular";
+    padding-top: 40px;
     letter-spacing: 1px;
-    color: #f3f4f5;
-    height: inherit;
+    color: #c6c6c6;
     width: 100%;
     text-align: right;
-    -webkit-box-shadow: 0px 1px 4px 0px #000000; 
-    -moz-box-shadow: 0px 1px 4px 0px #000000; 
-    box-shadow: 0px 1px 4px 0px #000000; 
-    -webkit-transition: opacity 0.2s ease;
-    -moz-transition: opacity 0.2s ease;
-    -o-transition: opacity 0.2s ease;
-    transition: opacity 0.2s ease;
-}
-
-.black-bg {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.gradient {
-    background-image: -webkit-gradient(linear, left top , right top, 
-                       from(rgba(0, 0, 0, 1)), to(rgba(51, 51, 51, .4)));
-    background-image: -moz-linear-gradient(right center, 
-                       rgba(51, 51, 51, 1) 20%, (rgba(51, 51, 51, 0) 95%);
-   
-
 }
 
 #navbar a:hover {
-    color: #f38237;
+    color: #5a997d;
+}
+
+#navbar ul {
+    margin-right: 30px;
+}
+
+.black-bg {
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+.gradient {
+    background-image: -webkit-gradient(linear, left top , right top,
+                       from(rgba(20, 20, 20, .9)), to(rgba(20, 20, 20, .7)));
+    background-image: -moz-linear-gradient(right center,
+                       rgba(38, 38, 38, 1) 20%, (rgba(38, 38, 38, 0) 95%);
+}
+
+#vertical {
+    position: absolute;
+    z-index: 300;
+    right: 15px;
+    top: 92px;
+    height: 30px;
+    border-right: 4px solid #5a997d;
+}
+
+.name {
+    position: absolute;
+    z-index: 300;
+    font-size: 0.7em;
+    text-align: left;
+    padding-top: 40px;
+    margin-left: 20px;
 }
 
 .nav-item {
@@ -347,14 +393,14 @@ header {
  * Contact Me
  *****************************************************************************/
 #contact {
-    margin-bottom: 100px;
+    height: 100%;
 }
 
 #contact-wrapper {
     width: inherit;
     text-align: left;
     margin-top: 50px;
-}
+9}
 
 #submit-form {
     display: inline-block;
@@ -383,10 +429,13 @@ header {
 }
 
 #info-wrapper {
+    position: absolute;
+    z-index: 200;
     display: inline-block;
     vertical-align: top;
+    text-align: left;
+    bottom: 50px;
     width: auto;
-    margin-left: 50px;
 }
 
 .info-item {
@@ -418,9 +467,9 @@ footer {
     height: 35px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    -webkit-box-shadow: 0px -1px 1px 0px; 
-    -moz-box-shadow: 0px -1px 1px 0px; 
-    box-shadow: 0px -1px 1px 0px; 
+    -webkit-box-shadow: 0px -1px 1px 0px;
+    -moz-box-shadow: 0px -1px 1px 0px;
+    box-shadow: 0px -1px 1px 0px;
 }
 
 #footer-inner {
@@ -445,7 +494,7 @@ footer a {
 
 #social-links a {
     display: inline-block;
-    background-image: url("../images/sprites.png");    
+    background-image: url("../images/sprites.png");
     background-size: 160px 42px;
     height: 41px;
     width: 41px;
